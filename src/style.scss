@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: facit;
+}
+
+@font-face {
+    font-family: facit;
+    src: url(./assets/fonts/Facit\ Regular.otf);
+}
+@font-face {
+    font-family: inter;
+    src: url(./assets/fonts/Inter-Light.ttf);
+}
+
+
+
+
+@import "./componentes/main/main";
+@import "./componentes/Header/header"
