@@ -1,20 +1,23 @@
 header {
-    height: 70px;
+    height: 90px;
     width: 100%;
     padding-top: 5px;
+    background-color: white;
     position: fixed;
     nav {
         display: flex;
+        height: 100%;
         justify-content: space-between;
         align-items: center;
         .header__menu-collapse {
             width: 30%;
             display: flex;
+            padding: 10px;
             align-items: center;
             justify-content: space-around;
             .header-icon {
                 font-size: 35px;
-                color: white;
+                color: rgb(0, 0, 0);
             }
         }
         .logo-container {

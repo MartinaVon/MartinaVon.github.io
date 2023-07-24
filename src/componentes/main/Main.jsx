@@ -1,5 +1,5 @@
 import { Section } from "../section/Section"
-import MainBanner from "../../assets/portada.jpg"
+import MainBanner from "../../assets/portada1.jpg"
 import { Frase } from "../Frase/Frase"
 import MountainImg from "../../assets/montañas.png"
 import "../../style/style.css"
@@ -11,19 +11,23 @@ export const Main = () => {
     <div className="main">
         <Section
           classname={"main-banner"}
-          content={<img src={MainBanner}/>}
+          content={
+            <>
+            <img src={MainBanner}/>
+            <div className="main-banner-text-container">
+            <h4 className="main-banner-text">
+                El montañismo romántico hoy sigue 
+                existiendo en cada uno de nosotros. 
+                Hemos tratado de insinuar en este sitio aquello que 
+                nosotros llamamos montaña, 
+                la verdadera montaña, una montaña que nadie muestra. 
+            </h4>
+            <button className="main-banner-button">ASOCIARSE</button>
+            </div>
+          </>
+          }
         />
-        <Section
-          classname={"main-intro-frase-container"}
-          content={<Frase
-          frase={"No somos atletas, no vivimos de la montaña, ni trabajamos en ella, no estamos sponsoreados, somos personas comunes como vos que buscan respuestas allá afuera, en las montañas."}
-          />}
-        />
-        <Section
-          classname={"main-img-mountain-container"}
-          content={<img src={MountainImg}/>}
-        />
-
+ 
         <Section
             classname={"main-sections-container"}
             content={
@@ -32,11 +36,32 @@ export const Main = () => {
                     <h2>ANDINISMO</h2>
                 </div>
                 <div className="gram-sections boulder-section">
-                    <h2>BOULDER Y ESCALADA</h2>
+                    <h2>ESCALADA DEPORTIVA Y BOULDER</h2>
                 </div>
                 </>
             }
         />
+
+        <Section
+            classname={"main-section-for-info"}
+            content={
+                    <>
+                        <span></span>  
+                        <h1>GRUPO ROSARINO DE ACTIVIDADES DE MONTAÑA</h1>
+                        <p>Nuestro grupo fue creado en 1983 y 
+                            desde 1994 cuenta con Personería 
+                            Jurídica otorgada por la I.G.P.J. de 
+                            Santa Fe, expediente Nro. 21817 de 
+                            1993 como Asociación Civil sin Fines 
+                            de Lucro, punto que en nuestro caso 
+                            no es una mera declaración sino que 
+                            es esencia de todas nuestras 
+                            actividades.
+                        </p>
+                        <button>VER MAS</button>
+                    </>
+            }
+        />  
 
         <Section
             classname={"association-section"}
@@ -68,11 +93,14 @@ export const Main = () => {
                 </div>
                 </>
             }
-        />        
-
-            <section class="events-section">
-                <h4>PRÓXIMOS EVENTOS</h4>
-                <div class="events__one-event">
+        /> 
+         <Section
+            classname={"main-events-container"}
+            content={
+                <>
+                    <h3>PRÓXIMOS EVENTOS</h3>
+                    
+                    <div class="events__one-event">
                 //////////////img
                     <h5>Travesía a Penitentes</h5>
                     <div class="one-event__info">
@@ -85,6 +113,13 @@ export const Main = () => {
                         <button>Ver detalles</button>
                     </div>
                 </div>
+                </>
+            }
+        />        
+
+            {/* <section class="events-section">
+                
+                
                 <div class="events__one-event">
                 //////////////img
                     <h5>Curso de escalada deportiva</h5>
@@ -98,7 +133,7 @@ export const Main = () => {
                         <button>Ver detalles</button>
                     </div>
                 </div>
-            </section>
+            </section> */}
     </div>
   )
 }

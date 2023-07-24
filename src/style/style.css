@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: facit;
+  font-family: nunito;
 }
 
 @font-face {
-  font-family: facit;
-  src: url(./assets/fonts/Facit\ Regular.otf);
+  font-family: nunito;
+  src: url(./assets/fonts/NunitoSans_7pt-ExtraLight.ttf);
 }
 @font-face {
   font-family: inter;
@@ -17,13 +17,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
 }
 .main .main-banner {
   width: 100%;
-  z-index: -2;
+  z-index: -3;
   height: 80vh;
   top: 0;
+  position: relative;
+  background-color: #7a0524;
 }
 .main .main-banner img {
   height: 100%;
@@ -31,98 +32,110 @@
   object-position: center;
   width: 100%;
 }
-.main .main-intro-frase-container {
-  z-index: 2;
-  background-color: white;
+.main .main-banner .main-banner-text-container {
+  position: absolute;
+  top: 50%;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.main .main-intro-frase-container .frase-for-presentation {
-  width: 100%;
-  height: auto;
+.main .main-banner .main-banner-text {
   text-align: center;
-  padding: 25px 15px 0 15px;
-  border-radius: 15px;
-  background-color: white;
+  color: white;
+  font-weight: 100;
+  font-size: 15px;
 }
-.main .main-intro-frase-container .frase-for-presentation h5 {
-  font-weight: lighter;
-  margin-top: 50px;
+.main .main-banner .main-banner-button {
+  color: white;
+  border: none;
   text-align: center;
-  font-size: 18px;
-  display: inline;
-  background-color: rgba(190, 212, 234, 0.631372549);
-  line-height: 25px;
-}
-.main .main-img-mountain-container {
-  width: 100%;
-  height: 50vh;
-  overflow: hidden;
-}
-.main .main-img-mountain-container img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 17px;
+  border-radius: 20px;
+  background-color: #7a0524;
 }
 .main .main-sections-container {
   width: 100%;
-  height: 70vh;
+  padding: 0 15px;
+  height: 60vh;
+  position: relative;
+  top: -20px;
+  z-index: -2;
   display: flex;
   flex-wrap: wrap;
-  background-color: #00233f;
   justify-content: space-around;
   padding-bottom: 30px;
 }
 .main .main-sections-container .gram-sections {
-  width: 95%;
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid white;
   height: 45%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   background-size: cover;
 }
 .main .main-sections-container .gram-sections h2 {
+  margin: 15px;
   color: white;
-  font-size: 20px;
-  text-align: center;
-  margin-top: 50px;
+  font-weight: 500;
+  font-size: 22px;
 }
 .main .main-sections-container .boulder-section {
-  background-image: url(../../../public/boulder1.jfif);
+  background-image: url(../../../public/portada.jpg);
 }
 .main .main-sections-container .alpinist-section {
-  background-image: url(../../../public/andinisme-glacier-marconi-el-chalten.jpg);
+  background-image: url(../../../public/gram\ monta.jpg);
 }
-
-.association-section {
-  position: relative;
-  padding-top: 40px;
-  top: -25px;
+.main .main-section-for-info {
+  padding: 15px;
+}
+.main .main-section-for-info span {
+  display: block;
+  height: 2px;
+  width: 35%;
+  border-top: #7a0524 solid 3px;
+}
+.main .main-section-for-info h1 {
+  font-weight: 500;
+  margin: 10px 0;
+}
+.main .main-section-for-info button {
+  color: white;
+  border: none;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 17px;
+  border-radius: 20px;
+  background-color: #7a0524;
+}
+.main .association-section {
+  padding: 0 15px;
+  padding-top: 20px;
   width: 100%;
   height: auto;
   border-radius: 15px;
   background-color: white;
 }
-.association-section .association__collapse-title {
-  margin: 20px;
+.main .association-section .association__collapse-title {
+  margin: 20px 0px;
 }
-@media (min-width: 720px) {
-  .association-section .association__collapse-title {
-    margin: 20px 50px;
-  }
-}
-.association-section .association__collapse-title h6 {
+.main .association-section .association__collapse-title h6 {
   padding: 5px;
   display: flex;
   justify-content: space-between;
   font-size: 18px;
-  font-weight: lighter;
-  border-bottom: #bed4ea 2px solid;
+  font-weight: 400;
+  border-bottom: #7a0524 solid 1px;
 }
-.association-section .association__collapse-section {
+.main .association-section .association__collapse-section {
   margin: 10px 0;
   display: flex;
   flex-direction: column;
 }
-.association-section .association__collapse-section a {
+.main .association-section .association__collapse-section a {
   background-color: #7a0524;
   color: white;
   text-decoration: none;
@@ -132,122 +145,63 @@
   text-align: center;
   border-radius: 8px;
 }
-.association-section .association__collapse-section .association__collapse-section-benefits-ul {
+.main .association-section .association__collapse-section .association__collapse-section-benefits-ul {
   list-style: none;
 }
-.association-section .association__collapse-section .association__collapse-section-benefits-ul li {
+.main .association-section .association__collapse-section .association__collapse-section-benefits-ul li {
   margin: 5px 0;
   font-size: 15px;
 }
-.association-section .association__collapse-section .association__collapse-section-benefits-ul li span {
+.main .association-section .association__collapse-section .association__collapse-section-benefits-ul li span {
   color: #00233f;
   font-size: 12px;
 }
-.association-section .association__collapse-section-form {
+.main .association-section .association__collapse-section-form {
   display: none;
 }
-.association-section .association__collapse-section-benefits {
+.main .association-section .association__collapse-section-benefits {
   display: none;
 }
-
-.events-section {
-  width: 100%;
+.main .main-events-container {
+  padding: 20px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
-  padding-bottom: 50px;
 }
-@media (min-width: 600px) {
-  .events-section {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+.main .main-events-container h3 {
+  font-size: 22px;
+  font-weight: 500;
 }
-.events-section h4 {
-  text-align: center;
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-@media (min-width: 600px) {
-  .events-section h4 {
-    width: 100%;
-    text-align: center;
-  }
-}
-.events-section .events__one-event {
+.main .main-events-container .events__one-event {
   width: 90%;
   height: 350px;
   margin: 10px 0;
-  background-color: #dfe5eb;
-}
-@media (min-width: 600px) {
-  .events-section .events__one-event {
-    width: 45%;
-    height: 400px;
-    max-width: 300px;
-  }
-}
-.events-section .events__one-event img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-.events-section .events__one-event h5 {
-  text-align: center;
-  font-weight: lighter;
-  font-size: 18px;
-  padding: 5px;
-  border-bottom: #00233f solid 1px;
-  margin: 10px;
-}
-.events-section .events__one-event .one-event__info {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-}
-.events-section .events__one-event .one-event__info p {
-  margin: 5px 0;
-  font-size: 13px;
-}
-.events-section .events__one-event .one-event__info span {
-  color: #7a0524;
-  font-weight: bolder;
-}
-.events-section .events__one-event .one-event__buttons {
-  display: flex;
-  justify-content: space-around;
-}
-.events-section .events__one-event .one-event__buttons button {
-  color: white;
-  background-color: #00233f;
-  padding: 10px;
-  border: none;
-  width: 35%;
-  border-radius: 5px;
+  background-color: #dfdfdf;
 }
 
 header {
-  height: 70px;
+  height: 90px;
   width: 100%;
   padding-top: 5px;
+  background-color: white;
   position: fixed;
 }
 header nav {
   display: flex;
+  height: 100%;
   justify-content: space-between;
   align-items: center;
 }
 header nav .header__menu-collapse {
   width: 30%;
   display: flex;
+  padding: 10px;
   align-items: center;
   justify-content: space-around;
 }
 header nav .header__menu-collapse .header-icon {
   font-size: 35px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 header nav .logo-container {
   display: flex;
