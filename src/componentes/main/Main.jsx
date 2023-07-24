@@ -1,13 +1,11 @@
 import { Section } from "../section/Section"
 import MainBanner from "../../assets/portada1.jpg"
-import { Frase } from "../Frase/Frase"
-import MountainImg from "../../assets/montañas.png"
-import "../../style/style.css"
+import evento1 from "../../assets/evento1.jpg"
+import "../../style.css"
 import { MdExpand } from 'react-icons/md'
 
 export const Main = () => {
   return (
-
     <div className="main">
         <Section
           classname={"main-banner"}
@@ -99,41 +97,22 @@ export const Main = () => {
             content={
                 <>
                     <h3>PRÓXIMOS EVENTOS</h3>
-                    
-                    <div class="events__one-event">
-                //////////////img
-                    <h5>Travesía a Penitentes</h5>
-                    <div class="one-event__info">
+                    <div className="events__one-event">
+                    <img src={evento1} className="events__one-event-img"/>
+                    <h3>CURSO DE TRANSITO GLACIAR</h3>
+                    <div className="events__one-event-info">
                         <p><span>Lugar: </span>Mendoza, Argentina.</p>
-                        <p><span>Fecha: </span>27/03/2023 al 31/03/2023.</p>
-                        <p><span>Precio: </span>Socios: $17.000, no socios $24.000.</p>
+                        <p><span>Fecha: </span>27/08/2023 al 31/08/2023.</p>
+                        <p><span>Precio: </span>Socios: $130.000, no socios $100.000.</p>
                     </div>
-                    <div class="one-event__buttons">
-                        <button>Reservar</button>
-                        <button>Ver detalles</button>
-                    </div>
+                    <div className="one-event__buttons">
+                        <button className="one-event-button1">Reservar</button>
+                        <button className="one-event-button2">Ver detalles</button>
+                    </div> 
                 </div>
                 </>
             }
         />        
-
-            {/* <section class="events-section">
-                
-                
-                <div class="events__one-event">
-                //////////////img
-                    <h5>Curso de escalada deportiva</h5>
-                    <div class="one-event__info">
-                        <p><span>Lugar: </span>Sede GRAM, Rosario.</p>
-                        <p><span>Fecha: </span>16, 17, 22, 23 de mayo.</p>
-                        <p><span>Precio: </span>Socios: $24.000, no socios $32.000.</p>
-                    </div>
-                    <div class="one-event__buttons">
-                        <button>Reservar</button>
-                        <button>Ver detalles</button>
-                    </div>
-                </div>
-            </section> */}
     </div>
   )
 }

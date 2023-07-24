@@ -7,15 +7,12 @@
 
 @font-face {
     font-family: nunito;
-    src: url(./assets/fonts/NunitoSans_7pt-ExtraLight.ttf);
+    src: url(/src/assets/fonts/NunitoSans_7pt-ExtraLight.ttf);
 }
-@font-face {
-    font-family: inter;
-    src: url(./assets/fonts/Inter-Light.ttf);
-}
-
-
 
 
 @import "./componentes/main/main";
-@import "./componentes/Header/header"
+@import "./componentes/Header/header";
+@import "./componentes/HambMenu/hambMenu"
+
+

@@ -58,7 +58,7 @@
         .gram-sections {
             width: 100%;
             border-radius: 5px;
-            border: 2px solid white;
+            border: 3px solid white;
             height: 45%;
             display: flex;
             background-size: cover;
@@ -169,63 +169,52 @@
             font-weight: 500;
         }
         .events__one-event {
-            width: 90%;
+            width: 100%;
+            padding: 10px;
             height: 350px;
             margin: 10px 0;
             background-color: #dfdfdf;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+            h3 {
+                text-align: center;
+                font-size: 17px;
+                border-bottom: #7a0524 solid 2px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 14px;
+                margin-bottom: 5px;
+                span {
+                    font-weight: bolder;
+                }
+            }
+            .one-event__buttons {
+                display: flex;
+                justify-content: space-around;
+                .one-event-button1 {
+                    color: white;
+                    border: none;
+                    text-align: center;
+                    padding: 7px 15px;
+                    font-size: 15px;
+                    border-radius: 20px;
+                    background-color: #7a0524;
+                }
+                .one-event-button2 {
+                    text-decoration: underline;
+                    font-size: 15px;
+                    border: none;
+                    background-color: transparent;
+                }
+            }
+          
         }
     
     }
 }
 
     
-        //     .events__one-event {
-                
-        //         @media (min-width: 600px) {
-        //             width: 45%;
-        //             height: 400px;
-        //             max-width: 300px;
-        //           }
-        //         img {
-        //             width: 100%;
-        //             height: 150px;
-        //             object-fit: cover;
-        //         }
-        //         h5 {
-        //             text-align: center;
-        //             font-weight: lighter;
-        //             font-size: 18px;
-        //             padding: 5px;
-        //             border-bottom: #00233f solid 1px;
-        //             margin: 10px;
-        //         }
-        //         .one-event__info {
-        //             padding: 10px;
-        //             display: flex; 
-        //             flex-direction: column;
-        //             p {
-        //                 margin: 5px 0;
-        //                 font-size: 13px;
-        //             }
-        //             span {
-        //                 color: #7a0524;
-        //                 font-weight: bolder;
-        //             }
-        //         }
-        //         .one-event__buttons {
-        //             display: flex;
-        //             justify-content: space-around;
-        //             button {
-        //                 color: white;
-        //                 background-color: #00233f;
-        //                 padding: 10px;
-        //                 border: none;
-        //                 width: 35%;
-        //                 border-radius: 5px;
-        //             }
-        //         }
-        //     }
-        // }
-        
-    
-    
+ 

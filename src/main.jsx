@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import "./style/style.css"
+import "./style.css"
 import { Main } from './componentes/main/Main'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Header } from './componentes/Header/Header'
